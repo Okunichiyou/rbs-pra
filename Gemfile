@@ -43,6 +43,7 @@ group :development, :test do
 
   gem "rbs", "~> 3.9"
   gem "rbs_rails", require: false
+  gem "rbs-inline", require: false
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
@@ -52,4 +53,9 @@ group :development do
   gem "web-console"
 
   gem "steep", "~> 1.10.0"
+end
+
+group :test do
+  gem "rspec-rails"
+  gem "rbs-trace"
 end
