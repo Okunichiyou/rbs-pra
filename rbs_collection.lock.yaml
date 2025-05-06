@@ -141,10 +141,22 @@ gems:
   version: '0'
   source:
     type: stdlib
+- name: dbm
+  version: '0'
+  source:
+    type: stdlib
 - name: delegate
   version: '0'
   source:
     type: stdlib
+- name: diff-lcs
+  version: '1.5'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: eb6867fdb70e82e3aac6b51623ed1b6760c3c072
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
 - name: digest
   version: '0'
   source:
@@ -289,6 +301,18 @@ gems:
   version: '0'
   source:
     type: stdlib
+- name: prism
+  version: 1.2.0
+  source:
+    type: rubygems
+- name: pstore
+  version: '0'
+  source:
+    type: stdlib
+- name: psych
+  version: '0'
+  source:
+    type: stdlib
 - name: rack
   version: '2.2'
   source:
@@ -339,6 +363,10 @@ gems:
     repo_dir: gems
 - name: rbs
   version: 3.9.2
+  source:
+    type: rubygems
+- name: rbs-trace
+  version: 0.5.1
   source:
     type: rubygems
 - name: rdoc
