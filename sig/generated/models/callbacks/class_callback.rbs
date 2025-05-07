@@ -1,0 +1,8 @@
+# Generated from app/models/callbacks/class_callback.rb with RBS::Inline
+
+module Callbacks
+  class ClassCallback
+    # @rbs (ActiveRecord::Base) -> String?
+    def self.before_validation: (ActiveRecord::Base) -> String?
+  end
+end
