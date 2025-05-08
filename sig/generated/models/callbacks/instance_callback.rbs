@@ -5,7 +5,28 @@ module Callbacks
     # @rbs (Symbol) -> void
     def initialize: (Symbol) -> void
 
-    # @rbs (ActiveRecord::Base) -> String?
-    def before_validation: (ActiveRecord::Base) -> String?
+    # @rbs (untyped) -> String?
+    def before_validation: (untyped) -> String?
+
+    # @rbs (untyped) -> void
+    def after_validation: (untyped) -> void
+
+    # @rbs (untyped) -> void
+    def before_save: (untyped) -> void
+
+    # @rbs (untyped) -> void
+    def before_create: (untyped) -> void
+
+    # @rbs (untyped) -> void
+    def after_create: (untyped) -> void
+
+    # @rbs (untyped) -> void
+    def after_save: (untyped) -> void
+
+    # @rbs (untyped) { () -> void } -> void
+    def around_create: (untyped) { () -> void } -> void
+
+    # @rbs (untyped) { () -> void } -> void
+    def around_save: (untyped) { () -> void } -> void
   end
 end

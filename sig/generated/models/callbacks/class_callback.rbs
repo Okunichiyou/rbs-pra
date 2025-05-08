@@ -2,7 +2,28 @@
 
 module Callbacks
   class ClassCallback
-    # @rbs (ActiveRecord::Base) -> String?
-    def self.before_validation: (ActiveRecord::Base) -> String?
+    # @rbs (untyped) -> String?
+    def self.before_validation: (untyped) -> String?
+
+    # @rbs (untyped) -> void
+    def self.after_validation: (untyped) -> void
+
+    # @rbs (untyped) -> void
+    def self.before_save: (untyped) -> void
+
+    # @rbs (untyped) -> void
+    def self.before_create: (untyped) -> void
+
+    # @rbs (untyped) -> void
+    def self.after_create: (untyped) -> void
+
+    # @rbs (untyped) -> void
+    def self.after_save: (untyped) -> void
+
+    # @rbs (untyped) { () -> void } -> void
+    def self.around_create: (untyped) { () -> void } -> void
+
+    # @rbs (untyped) { () -> void } -> void
+    def self.around_save: (untyped) { () -> void } -> void
   end
 end

@@ -2,10 +2,46 @@
 
 module Callbacks
   class ClassCallback
-    # @rbs (ActiveRecord::Base) -> String?
+    # @rbs (untyped) -> String?
     def self.before_validation(model_obj)
-      str = model_obj.send(:content)
-      model_obj.send("content=", str + " (before_validation)")
+      Rails.logger.info("class before_validation: #{model_obj}")
+    end
+
+    # @rbs (untyped) -> void
+    def self.after_validation(model_obj)
+      Rails.logger.info("class after_validation: #{model_obj}")
+    end
+
+    # @rbs (untyped) -> void
+    def self.before_save(model_obj)
+      Rails.logger.info("class before_save: #{model_obj}")
+    end
+
+    # @rbs (untyped) -> void
+    def self.before_create(model_obj)
+      Rails.logger.info("class before_create: #{model_obj}")
+    end
+
+    # @rbs (untyped) -> void
+    def self.after_create(model_obj)
+      Rails.logger.info("class after_create: #{model_obj}")
+    end
+
+    # @rbs (untyped) -> void
+    def self.after_save(model_obj)
+      Rails.logger.info("class after_save: #{model_obj}")
+    end
+
+    # @rbs (untyped) { () -> void } -> void
+    def self.around_create(model_obj)
+      Rails.logger.info("class around_create: #{model_obj}")
+      yield
+    end
+
+    # @rbs (untyped) { () -> void } -> void
+    def self.around_save(model_obj)
+      Rails.logger.info("class around_save: #{model_obj}")
+      yield
     end
   end
 end
